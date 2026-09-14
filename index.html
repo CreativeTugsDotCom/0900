@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krogh Family Farms | Corn-Cob Sweetened Spread | Atlantic, Iowa</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display for Editorial Serif Headings & Plus Jakarta Sans for Modern Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for refined minimal icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FBF9F5',
+                        warmvry: '#F4EFE6',
+                        earth: '#2C2621',
+                        rustred: '#9E3C2F',
+                        heritageblue: '#2B4C6F',
+                        farmgreen: '#3D5A45',
+                        sand: '#E6DEC9'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom smooth scrollbar & selection */
+        ::selection {
+            background-color: #9E3C2F;
+            color: #FBF9F5;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FBF9F5;
+            color: #2C2621;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .grain-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-cream text-earth antialiased selection:bg-rustred selection:text-cream">
+    <!-- Header / Navigation -->
+    <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-cream/90 backdrop-blur-md border-b border-earth/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
+            <!-- Logo / Brand Wordmark -->
+            <a href="#" class="group flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-warmvry border border-earth/20 flex items-center justify-center text-rustred group-hover:bg-rustred group-hover:text-cream transition-colors duration-300">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-lg font-bold tracking-wider uppercase text-earth leading-none">Krogh</span>
+                    <span class="text-[10px] tracking-[0.25em] uppercase text-earth/70 font-semibold mt-1">Family Farms</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-earth/80">
+                <a href="#story" class="hover:text-rustred transition-colors">Story</a>
+                <a href="#the-spread" class="hover:text-rustred transition-colors">The Spread</a>
+                <a href="#how-its-made" class="hover:text-rustred transition-colors">How It's Made</a>
+                <a href="#flavors" class="hover:text-rustred transition-colors">Flavors</a>
+                <a href="#ways-to-enjoy" class="hover:text-rustred transition-colors">Ways to Enjoy</a>
+                <a href="#contact" class="hover:text-rustred transition-colors">Contact</a>
+            </nav>
+
+            <!-- Right CTAs -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#the-spread" class="px-6 py-3 bg-rustred text-cream text-sm font-semibold rounded-full hover:bg-earth transition-all duration-300 shadow-sm">
+                    Shop the Spread
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" aria-label="Toggle menu" class="md:hidden p-2 text-earth focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-cream border-b border-earth/10 px-6 py-6 shadow-xl flex flex-col gap-4">
+            <a href="#story" class="mobile-link text-lg font-serif text-earth py-2 border-b border-earth/5">Story</a>
+            <a href="#the-spread" class="mobile-link text-lg font-serif text-earth py-2 border-b border-earth/5">The Spread</a>
+            <a href="#how-its-made" class="mobile-link text-lg font-serif text-earth py-2 border-b border-earth/5">How It's Made</a>
+            <a href="#flavors" class="mobile-link text-lg font-serif text-earth py-2 border-b border-earth/5">Flavors</a>
+            <a href="#ways-to-enjoy" class="mobile-link text-lg font-serif text-earth py-2 border-b border-earth/5">Ways to Enjoy</a>
+            <a href="#contact" class="mobile-link text-lg font-serif text-earth py-2 border-b border-earth/5">Contact</a>
+            <a href="#the-spread" class="mobile-link mt-2 w-full text-center py-3 bg-rustred text-cream rounded-full font-semibold">Shop the Spread</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden border-b border-earth/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 flex flex-col items-start z-10">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-warmvry border border-earth/10 text-xs font-semibold uppercase tracking-widest text-rustred mb-6">
+                        <i class="fa-solid fa-seedling text-[10px]"></i> Atlantic, Iowa Roots
+                    </div>
+                    <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-earth leading-[1.08] mb-6">
+                        An Old-Fashioned Spread with a Story Worth Tasting.
+                    </h1>
+                    <p class="text-lg lg:text-xl text-earth/80 font-normal leading-relaxed max-w-2xl mb-10">
+                        Made from corn cobs and rooted in an award-winning recipe, Krogh Family Farms’ signature spread brings a little Iowa ingenuity to the table.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="#the-spread" class="px-8 py-4 bg-rustred text-cream text-center font-semibold rounded-full hover:bg-earth transition-all duration-300 shadow-md">
+                            Shop the Spread
+                        </a>
+                        <a href="#story" class="px-8 py-4 bg-transparent border border-earth/30 text-earth text-center font-semibold rounded-full hover:bg-warmvry transition-all duration-300">
+                            Our Story
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center gap-3 text-xs uppercase tracking-widest text-earth/60 font-medium">
+                        <span class="w-8 h-[1px] bg-earth/30"><span></span></span>
+                        <span>Made with Iowa roots in Atlantic, Iowa</span>
+                    </div>
+                </div>
+
+                <!-- Hero Imagery Grid / Editorial Composition -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-earth/10 bg-warmvry aspect-[4/5]">
+                        <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Artisan food spread in rustic jar with natural corn and ingredients" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                             onerror="this.src='https://placehold.co/600x750/F4EFE6/2C2621?text=Krogh+Family+Farms'">
+                    </div>
+                    <!-- Decorative Badge element -->
+                    <div class="absolute -bottom-6 -left-6 z-20 bg-cream p-6 rounded-2xl shadow-xl border border-earth/10 hidden sm:block max-w-[220px]">
+                        <div class="font-serif text-2xl font-bold text-rustred">150 Jars</div>
+                        <p class="text-xs text-earth/70 mt-1">Crafted from approximately 15 pounds of hand-selected local cobs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Introduction Section -->
+    <section id="the-spread" class="py-24 lg:py-32 bg-warmvry/50 border-b border-earth/10 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="max-w-3xl mx-auto text-center mb-20">
+                <span class="text-xs font-semibold uppercase tracking-[0.25em] text-rustred block mb-3">Signature Creation</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-earth mb-6">
+                    Not Quite Jelly. Something Different.
+                </h2>
+                <div class="w-16 h-[2px] bg-rustred/40 mx-auto mb-6"></div>
+                <p class="text-lg text-earth/80 leading-relaxed font-normal">
+                    Randall Krogh describes his creation as a true spread rather than ordinary jelly. Crafted from an unexpected base of locally harvested corn cobs, it features a distinctive flavor profile with lower sugar content than many traditional fruit jellies, preserving a long-running family farm story in every jar.
+                </p>
+            </div>
+
+            <!-- Product Showcase Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="bg-cream rounded-2xl overflow-hidden border border-earth/10 shadow-lg p-8 lg:p-12">
+                    <div class="inline-block px-3 py-1 bg-rustred/10 text-rustred text-xs font-semibold rounded-full uppercase tracking-wider mb-4">Featured Product</div>
+                    <h3 class="font-serif text-3xl font-bold text-earth mb-4">Corn-Cob Sweetened Spread</h3>
+                    <p class="text-earth/70 mb-6 leading-relaxed">
+                        A one-of-a-kind heritage spread made by boiling carefully stored corn cobs, straining through fine mesh, and blending with sugar and pectin according to Randall's proprietary recipe.
+                    </p>
+                    <ul class="space-y-3 mb-8 text-sm text-earth/80 font-medium">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-rustred"><span></span></i> Lower sugar content than traditional jellies</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-rustred"><span></span></i> Zero sodium & zero cholesterol</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-rustred"><span></span></i> Available in White Cob (Apple & Honey) and Red Cob (Apple, Honey & Cinnamon)</li>
+                    </ul>
+                    <div class="flex items-center justify-between pt-6 border-t border-earth/10">
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-earth/60 block">Status</span>
+                            <span class="font-serif font-bold text-earth text-lg">Handcrafted Recipe</span>
+                        </div>
+                        <a href="#contact" class="px-6 py-3 bg-earth text-cream text-sm font-semibold rounded-full hover:bg-rustred transition-colors">
+                            Inquire / Order
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="rounded-2xl overflow-hidden shadow-md aspect-[3/4] border border-earth/10">
+                            <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Glass jar with wooden spoon" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/400x500/FBF9F5/2C2621?text=Spread+Jar'">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="rounded-2xl overflow-hidden shadow-md aspect-[3/4] border border-earth/10">
+                            <img src="https://images.unsplash.com/photo-1546548970-71785318a17b?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Fresh corn cobs on rustic wooden table" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/400x500/FBF9F5/2C2621?text=Corn+Cobs'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story / About Section -->
+    <section id="story" class="py-24 lg:py-32 border-b border-earth/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <div class="lg:col-span-5">
+                    <div class="rounded-2xl overflow-hidden shadow-xl border border-earth/10 aspect-[4/5] relative">
+                        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Iowa farmland and countryside" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://placehold.co/600x750/F4EFE6/2C2621?text=Iowa+Farmland'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-earth/70 via-transparent to-transparent flex items-end p-8">
+                            <p class="text-cream font-serif italic text-lg">"From a high-school experiment to a beloved Iowa original."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col justify-center">
+                    <span class="text-xs font-semibold uppercase tracking-[0.25em] text-rustred mb-3">Our Heritage</span>
+                    <h2 class="font-serif text-4xl sm:text-5xl font-bold text-earth mb-8">
+                        From a High-School Experiment to a Family Farm Original.
+                    </h2>
+                    
+                    <div class="space-y-6 text-earth/80 text-base lg:text-lg leading-relaxed">
+                        <p>
+                            It all began when Randall Krogh decided to make corn-cob jelly for a high-school project. When he first told people what he had created, they laughed. But the very next day, during a school taste contest, the faculty selected his unique creation for first prize. He sold four jars that day, planting the seed for what would become a lifelong venture.
+                        </p>
+                        <p>
+                            Years later, Randall learned about the University of Nebraska's Food Entrepreneur Assistance Program. He applied, refined his recipe, and in 2006 officially launched Krogh Family Farms, offering his corn-cob spread through local grocery stores and the historical website.
+                        </p>
+                        <p>
+                            Today, the spread stands as a testament to Midwestern ingenuity, transforming humble local agricultural materials into a memorable culinary specialty from Atlantic, Iowa.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 pt-8 border-t border-earth/10 grid grid-cols-2 sm:grid-cols-3 gap-6">
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-earth/60 block">Founded</span>
+                            <span class="font-serif font-bold text-earth text-xl">2006</span>
+                        </div>
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-earth/60 block">Location</span>
+                            <span class="font-serif font-bold text-earth text-xl">Atlantic, Iowa</span>
+                        </div>
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-earth/60 block">Founder</span>
+                            <span class="font-serif font-bold text-earth text-xl">Randall Krogh</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It's Made Section -->
+    <section id="how-its-made" class="py-24 lg:py-32 bg-warmvry/50 border-b border-earth/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="max-w-3xl mx-auto text-center mb-20">
+                <span class="text-xs font-semibold uppercase tracking-[0.25em] text-rustred block mb-3">Craftsmanship & Process</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-earth mb-6">
+                    How It's Made
+                </h2>
+                <div class="w-16 h-[2px] bg-rustred/40 mx-auto mb-6"></div>
+                <p class="text-lg text-earth/80 leading-relaxed">
+                    A meticulous process rooted in local agricultural partnerships and traditional batch production.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 01 -->
+                <div class="bg-cream p-8 rounded-2xl border border-earth/10 shadow-sm relative group hover:-translate-y-1 transition-transform duration-300">
+                    <span class="text-4xl font-serif font-bold text-rustred/30 block mb-4">01</span>
+                    <h3 class="font-serif text-xl font-bold text-earth mb-3">Local Corn Cobs</h3>
+                    <p class="text-earth/70 text-sm leading-relaxed">
+                        Sourced directly from four local farmers who harvest corn on the ear, ensuring exceptional raw material quality.
+                    </p>
+                </div>
+
+                <!-- Step 02 -->
+                <div class="bg-cream p-8 rounded-2xl border border-earth/10 shadow-sm relative group hover:-translate-y-1 transition-transform duration-300">
+                    <span class="text-4xl font-serif font-bold text-rustred/30 block mb-4">02</span>
+                    <h3 class="font-serif text-xl font-bold text-earth mb-3">Prepared With Care</h3>
+                    <p class="text-earth/70 text-sm leading-relaxed">
+                        After the corn is shelled, cobs are collected and stored in perforated plastic bags to keep them perfectly dry until needed.
+                    </p>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="bg-cream p-8 rounded-2xl border border-earth/10 shadow-sm relative group hover:-translate-y-1 transition-transform duration-300">
+                    <span class="text-4xl font-serif font-bold text-rustred/30 block mb-4">03</span>
+                    <h3 class="font-serif text-xl font-bold text-earth mb-3">Randall's Recipe</h3>
+                    <p class="text-earth/70 text-sm leading-relaxed">
+                        Cobs are boiled, debris is strained through a fine mesh, and pure sugar and pectin are added according to Randall's directions.
+                    </p>
+                </div>
+
+                <!-- Step 04 -->
+                <div class="bg-cream p-8 rounded-2xl border border-earth/10 shadow-sm relative group hover:-translate-y-1 transition-transform duration-300">
+                    <span class="text-4xl font-serif font-bold text-rustred/30 block mb-4">04</span>
+                    <h3 class="font-serif text-xl font-bold text-earth mb-3">From Cob to Jar</h3>
+                    <p class="text-earth/70 text-sm leading-relaxed">
+                        Approximately 15 pounds of cobs are carefully transformed at a local processing plant into around 150 eight-ounce jars.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flavor Section -->
+    <section id="flavors" class="py-24 lg:py-32 border-b border-earth/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="max-w-3xl mx-auto text-center mb-20">
+                <span class="text-xs font-semibold uppercase tracking-[0.25em] text-rustred block mb-3">The Varieties</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-earth mb-6">
+                    Two Distinct Profiles
+                </h2>
+                <div class="w-16 h-[2px] bg-rustred/40 mx-auto mb-6"></div>
+                <p class="text-lg text-earth/80 leading-relaxed">
+                    Randall separates white and red cobs to produce two distinct flavor experiences, each offering a taste reminiscent of orchard fruits and warm spices.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- White Cob Product Card -->
+                <div class="bg-warmvry/60 rounded-3xl overflow-hidden border border-earth/10 shadow-lg p-8 lg:p-12 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-4 py-1.5 bg-cream rounded-full text-xs font-semibold uppercase tracking-wider text-earth">White Cob Selection</span>
+                            <span class="w-4 h-4 rounded-full bg-cream border border-earth/30"></span>
+                        </div>
+                        <h3 class="font-serif text-3xl lg:text-4xl font-bold text-earth mb-4">Apple + Honey</h3>
+                        <p class="text-earth/70 text-base leading-relaxed mb-8">
+                            Crafted from white corn cobs, this variety yields a smooth, delicate flavor profile with natural notes resembling sweet apple and warm honey.
+                        </p>
+                    </div>
+                    <div class="pt-8 border-t border-earth/10 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-earth/60 block">Jar Size</span>
+                            <span class="font-serif font-bold text-earth">8 oz. Glass Jar</span>
+                        </div>
+                        <a href="#contact" class="px-6 py-3 bg-rustred text-cream text-sm font-semibold rounded-full hover:bg-earth transition-colors">
+                            Request White Cob
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Red Cob Product Card -->
+                <div class="bg-warmvry/60 rounded-3xl overflow-hidden border border-earth/10 shadow-lg p-8 lg:p-12 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-4 py-1.5 bg-rustred text-cream rounded-full text-xs font-semibold uppercase tracking-wider">Red Cob Selection</span>
+                            <span class="w-4 h-4 rounded-full bg-rustred"></span>
+                        </div>
+                        <h3 class="font-serif text-3xl lg:text-4xl font-bold text-earth mb-4">Apple + Honey + Cinnamon</h3>
+                        <p class="text-earth/70 text-base leading-relaxed mb-8">
+                            Crafted from red corn cobs with a dash of cinnamon added, delivering a richer, spiced aromatic profile that elevates both sweet and savory dishes.
+                        </p>
+                    </div>
+                    <div class="pt-8 border-t border-earth/10 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-earth/60 block">Jar Size</span>
+                            <span class="font-serif font-bold text-earth">8 oz. Glass Jar</span>
+                        </div>
+                        <a href="#contact" class="px-6 py-3 bg-rustred text-cream text-sm font-semibold rounded-full hover:bg-earth transition-colors">
+                            Request Red Cob
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ways to Enjoy Section -->
+    <section id="ways-to-enjoy" class="py-24 lg:py-32 bg-warmvry/50 border-b border-earth/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="max-w-3xl mx-auto text-center mb-20">
+                <span class="text-xs font-semibold uppercase tracking-[0.25em] text-rustred block mb-3">Culinary Versatility</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-earth mb-6">
+                    Made for More Than Toast.
+                </h2>
+                <div class="w-16 h-[2px] bg-rustred/40 mx-auto mb-6"></div>
+                <p class="text-lg text-earth/80 leading-relaxed">
+                    While wonderful on breakfast classics, customers have discovered that Krogh Family Farms' spread shines across a wide range of culinary creations.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Use 1 -->
+                <div class="bg-cream rounded-2xl overflow-hidden border border-earth/10 shadow-sm group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=800&auto=format&fit=crop" 
+                             alt="Pancakes with syrup and spread" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/FBF9F5/2C2621?text=Pancakes'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-earth mb-2">Pancakes & Biscuits</h3>
+                        <p class="text-earth/70 text-sm leading-relaxed">Melted over warm weekend pancakes or spread generously across freshly baked buttermilk biscuits.</p>
+                    </div>
+                </div>
+
+                <!-- Use 2 -->
+                <div class="bg-cream rounded-2xl overflow-hidden border border-earth/10 shadow-sm group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop" 
+                             alt="Barbecue ribs and meat glaze" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/FBF9F5/2C2621?text=Marinades+%26+Glazes'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-earth mb-2">Meat Marinades & Glazes</h3>
+                        <p class="text-earth/70 text-sm leading-relaxed">Brush onto pork or chicken during grilling to create a caramelized, flavorful glaze with subtle sweetness.</p>
+                    </div>
+                </div>
+
+                <!-- Use 3 -->
+                <div class="bg-cream rounded-2xl overflow-hidden border border-earth/10 shadow-sm group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop" 
+                             alt="Appetizer dipping sauces" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/FBF9F5/2C2621?text=Dipping+Sauces'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-earth mb-2">Dipping Sauces</h3>
+                        <p class="text-earth/70 text-sm leading-relaxed">Pair with savory finger foods or cheese boards for an unexpected, delightful flavor contrast.</p>
+                    </div>
+                </div>
+
+                <!-- Use 4 -->
+                <div class="bg-cream rounded-2xl overflow-hidden border border-earth/10 shadow-sm group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=800&auto=format&fit=crop" 
+                             alt="Baked beans and barbecue dishes" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/FBF9F5/2C2621?text=Baked+Beans'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-earth mb-2">Baked Beans & Barbecue</h3>
+                        <p class="text-earth/70 text-sm leading-relaxed">Stir into slow-cooked baked beans to add depth, richness, and authentic country-style flavor.</p>
+                    </div>
+                </div>
+
+                <!-- Use 5 -->
+                <div class="bg-cream rounded-2xl overflow-hidden border border-earth/10 shadow-sm group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop" 
+                             alt="Gourmet culinary presentation" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/FBF9F5/2C2621?text=Culinary+Accent'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-earth mb-2">Culinary Accent</h3>
+                        <p class="text-earth/70 text-sm leading-relaxed">An imaginative pantry staple that sparks conversation and elevates everyday family meals.</p>
+                    </div>
+                </div>
+
+                <!-- Use 6 -->
+                <div class="bg-cream rounded-2xl overflow-hidden border border-earth/10 shadow-sm group flex flex-col justify-center items-center text-center p-8 bg-rustred text-cream">
+                    <i class="fa-solid fa-utensils text-3xl mb-4 opacity-80"></i>
+                    <h3 class="font-serif text-2xl font-bold mb-2">Share Your Recipe</h3>
+                    <p class="text-cream/80 text-sm mb-6">Have you tried the spread in a unique family recipe? We'd love to hear how you enjoy it.</p>
+                    <a href="#contact" class="px-6 py-2.5 bg-cream text-earth text-sm font-semibold rounded-full hover:bg-warmvry transition-colors">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reaction Section -->
+    <section class="py-24 lg:py-32 border-b border-earth/10">
+        <div class="max-w-5xl mx-auto px-6 lg:px-12 text-center">
+            <span class="text-xs font-semibold uppercase tracking-[0.25em] text-rustred block mb-3">Community Reception</span>
+            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-earth mb-8">
+                An Unexpected Favorite.
+            </h2>
+            <div class="w-16 h-[2px] bg-rustred/40 mx-auto mb-10"></div>
+            <p class="text-xl lg:text-2xl font-serif text-earth/90 italic leading-relaxed max-w-3xl mx-auto mb-10">
+                "Older customers often remember similar homemade preserves from generations past, while younger visitors are routinely surprised by how surprisingly delicious a corn-cob spread can truly taste."
+            </p>
+            <div class="text-xs font-semibold uppercase tracking-widest text-earth/60">
+                <span>Customer reactions documented by FARM SHOW Magazine</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Krogh Family Farms Section -->
+    <section class="py-24 lg:py-32 bg-warmvry/50 border-b border-earth/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="max-w-3xl mx-auto text-center mb-20">
+                <span class="text-xs font-semibold uppercase tracking-[0.25em] text-rustred block mb-3">Our Core Principles</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-earth mb-6">
+                    Why Krogh Family Farms?
+                </h2>
+                <div class="w-16 h-[2px] bg-rustred/40 mx-auto mb-6"></div>
+                <p class="text-lg text-earth/80 leading-relaxed">
+                    Rooted in authenticity, local agriculture, and an unforgettable story.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-cream p-8 rounded-2xl border border-earth/10 shadow-sm">
+                    <span class="text-xs font-bold text-rustred uppercase tracking-widest block mb-3">01 / Original</span>
+                    <h3 class="font-serif text-xl font-bold text-earth mb-3">A Truly Original Recipe</h3>
+                    <p class="text-earth/70 text-sm leading-relaxed">A distinctive spread crafted from an unexpected agricultural ingredient with unmatched heritage.</p>
+                </div>
+                <div class="bg-cream p-8 rounded-2xl border border-earth/10 shadow-sm">
+                    <span class="text-xs font-bold text-rustred uppercase tracking-widest block mb-3">02 / Heritage</span>
+                    <h3 class="font-serif text-xl font-bold text-earth mb-3">Iowa Roots</h3>
+                    <p class="text-earth/70 text-sm leading-relaxed">Deeply connected to Atlantic, Iowa, celebrating the spirit of small-town Midwestern innovation.</p>
+                </div>
+                <div class="bg-cream p-8 rounded-2xl border border-earth/10 shadow-sm">
+                    <span class="text-xs font-bold text-rustred uppercase tracking-widest block mb-3">03 / Local</span>
+                    <h3 class="font-serif text-xl font-bold text-earth mb-3">Local Farmer Connections</h3>
+                    <p class="text-earth/70 text-sm leading-relaxed">Corn cobs are responsibly sourced from four dedicated local farmers harvesting corn on the ear.</p>
+                </div>
+                <div class="bg-cream p-8 rounded-2xl border border-earth/10 shadow-sm">
+                    <span class="text-xs font-bold text-rustred uppercase tracking-widest block mb-3">04 / Story</span>
+                    <h3 class="font-serif text-xl font-bold text-earth mb-3">A Story Worth Sharing</h3>
+                    <p class="text-earth/70 text-sm leading-relaxed">From a high-school science fair experiment into a celebrated specialty food product.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Primary CTA Banner Section -->
+    <section class="py-24 lg:py-32 bg-earth text-cream relative overflow-hidden">
+        <div class="absolute inset-0 opacity-15">
+            <img src="https://images.unsplash.com/photo-1546548970-71785318a17b?q=80&w=1200&auto=format&fit=crop" 
+                 alt="Background farm texture" 
+                 class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-5xl mx-auto px-6 lg:px-12 text-center relative z-10">
+            <span class="text-xs font-semibold uppercase tracking-[0.25em] text-sand block mb-4">Experience the Tradition</span>
+            <h2 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-cream leading-tight">
+                Ready to Taste the Story?
+            </h2>
+            <p class="text-lg lg:text-xl text-cream/80 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Discover the corn-cob spread that started with a high-school experiment and became a one-of-a-kind Iowa food product.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#the-spread" class="w-full sm:w-auto px-8 py-4 bg-rustred text-cream font-semibold rounded-full hover:bg-cream hover:text-earth transition-all duration-300 shadow-lg">
+                    Shop the Spread
+                </a>
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-cream/30 text-cream font-semibold rounded-full hover:bg-cream/10 transition-all duration-300">
+                    Contact Krogh Family Farms
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 lg:py-32 border-b border-earth/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-semibold uppercase tracking-[0.25em] text-rustred block mb-3">Get in Touch</span>
+                    <h2 class="font-serif text-4xl sm:text-5xl font-bold text-earth mb-6">
+                        Let's Talk
+                    </h2>
+                    <p class="text-earth/70 text-lg leading-relaxed mb-8">
+                        Whether you have questions about our corn-cob spread, want to place an order, or simply wish to share your experience, we would love to hear from you.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-warmvry border border-earth/10 flex items-center justify-center text-rustred shrink-0 mt-1">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-earth text-base">Location & Mailing Address</h3>
+                                <p class="text-earth/70 text-sm mt-1">
+                                    Krogh Family Farms<br>
+                                    Randall Krogh<br>
+                                    P.O. Box 128<br>
+                                    Atlantic, Iowa 50022
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-warmvry border border-earth/10 flex items-center justify-center text-rustred shrink-0 mt-1">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-earth text-base">Telephone</h3>
+                                <p class="text-earth/70 text-sm mt-1">
+                                    <a href="tel:7122499083" class="hover:text-rustred transition-colors">712-249-9083</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-warmvry border border-earth/10 flex items-center justify-center text-rustred shrink-0 mt-1">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-earth text-base">Email</h3>
+                                <p class="text-earth/70 text-sm mt-1">
+                                    <a href="mailto:info@kroghfamilyfarms.com" class="hover:text-rustred transition-colors">info@kroghfamilyfarms.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7 bg-warmvry/50 p-8 lg:p-12 rounded-3xl border border-earth/10 shadow-sm">
+                    <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-earth mb-2">Your Name</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3.5 rounded-xl bg-cream border border-earth/20 text-earth focus:outline-none focus:border-rustred transition-colors" placeholder="Randall Krogh">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-earth mb-2">Email Address</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3.5 rounded-xl bg-cream border border-earth/20 text-earth focus:outline-none focus:border-rustred transition-colors" placeholder="randall@example.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-earth mb-2">Message</label>
+                            <textarea id="message" rows="5" required class="w-full px-4 py-3.5 rounded-xl bg-cream border border-earth/20 text-earth focus:outline-none focus:border-rustred transition-colors" placeholder="I would like to inquire about ordering jars of the corn-cob spread..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-rustred text-cream font-semibold rounded-xl hover:bg-earth transition-colors shadow-md">
+                            Send Message
+                        </button>
+                        <div id="form-success-msg" class="hidden text-center text-sm font-medium text-farmgreen bg-farmgreen/10 p-4 rounded-xl">
+                            Thank you! Your message has been sent successfully. We will be in touch soon.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-earth text-cream py-16 lg:py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-cream/10">
+                <!-- Col 1: Brand -->
+                <div class="lg:col-span-5">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-cream/10 border border-cream/20 flex items-center justify-center text-rustred">
+                            <svg class="w-5 h-5 text-cream" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif text-lg font-bold tracking-wider uppercase text-cream leading-none">Krogh</span>
+                            <span class="text-[10px] tracking-[0.25em] uppercase text-cream/70 font-semibold mt-1">Family Farms</span>
+                        </div>
+                    </div>
+                    <p class="text-cream/70 text-sm leading-relaxed max-w-sm mb-6">
+                        "An old-fashioned spread with a story worth tasting." Handcrafted in Atlantic, Iowa from local corn cobs.
+                    </p>
+                    <p class="text-xs text-cream/50">
+                        Historical domain reference: www.kroghfamilyfarms.com
+                    </p>
+                </div>
+
+                <!-- Col 2: Navigation -->
+                <div class="lg:col-span-3">
+                    <h3 class="font-serif text-base font-bold uppercase tracking-wider text-cream mb-6">Navigation</h3>
+                    <ul class="space-y-3 text-sm text-cream/70">
+                        <li><a href="#story" class="hover:text-cream transition-colors">Story</a></li>
+                        <li><a href="#the-spread" class="hover:text-cream transition-colors">The Spread</a></li>
+                        <li><a href="#how-its-made" class="hover:text-cream transition-colors">How It's Made</a></li>
+                        <li><a href="#flavors" class="hover:text-cream transition-colors">Flavors</a></li>
+                        <li><a href="#ways-to-enjoy" class="hover:text-cream transition-colors">Ways to Enjoy</a></li>
+                        <li><a href="#contact" class="hover:text-cream transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact Info -->
+                <div class="lg:col-span-4">
+                    <h3 class="font-serif text-base font-bold uppercase tracking-wider text-cream mb-6">Direct Contact</h3>
+                    <ul class="space-y-3 text-sm text-cream/70">
+                        <li>Atlantic, Iowa 50022</li>
+                        <li>Phone: <a href="tel:7122499083" class="hover:text-cream underline">712-249-9083</a></li>
+                        <li>Email: <a href="mailto:info@kroghfamilyfarms.com" class="hover:text-cream underline">info@kroghfamilyfarms.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-10 flex flex-col sm:flex-row items-center justify-between text-xs text-cream/50 gap-4">
+                <p>&copy; 2026 Krogh Family Farms. All rights reserved.</p>
+                <p>Designed with editorial distinction & heritage agricultural roots.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Sticky header background blur and border intensification on scroll
+        const siteHeader = document.getElementById('site-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                siteHeader.classList.add('shadow-md', 'bg-cream/95');
+                siteHeader.classList.remove('bg-cream/90');
+            } else {
+                siteHeader.classList.remove('shadow-md', 'bg-cream/95');
+                siteHeader.classList.add('bg-cream/90');
+            }
+        });
+
+        // Contact form handler simulation without alert()
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const successMsg = document.getElementById('form-success-msg');
+            const form = document.getElementById('contact-form');
+            
+            successMsg.classList.remove('hidden');
+            form.reset();
+            
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
